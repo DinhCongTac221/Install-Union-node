@@ -20,9 +20,9 @@ Ctrl+C to exit the screen
 ** 2.Install Docker Compose on Ubuntu 22.04**
 
 ```
-mkdir -p ~/.docker/cli-plugins/
+sudo mkdir -p ~/.docker/cli-plugins/
 curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
-chmod +x ~/.docker/cli-plugins/docker-compose
+sudo chmod +x ~/.docker/cli-plugins/docker-compose
 docker compose version
 ```
 
@@ -30,7 +30,7 @@ docker compose version
 **
 ```
 docker pull ghcr.io/unionlabs/bundle-testnet-6:v0.19.0
-mkdir ~/.unionvisor
+sudo mkdir ~/.unionvisor
 ```
 Change DinhCongtact221 to your node name
 ```
