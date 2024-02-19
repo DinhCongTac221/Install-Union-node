@@ -35,14 +35,14 @@ sudo docker compose version
 ** 3.Intall Unionvisor
 **
 ```
-sudo docker pull ghcr.io/unionlabs/bundle-testnet-6:v0.19.0
+docker pull ghcr.io/unionlabs/bundle-testnet-6:v0.19.0
 ```
 ```
 sudo mkdir ~/.unionvisor
 ```
 Change DinhCongtact221 to your node name
 ```
-sudo docker run \
+docker run \
   --volume ~/.unionvisor:/.unionvisor \
   --volume /tmp:/tmp \
   -it ghcr.io/unionlabs/bundle-testnet-6:v0.19.0 \
@@ -106,8 +106,8 @@ COMPOSE_FILE=/root/compose.yaml docker compose up -d
 
 To check logs of your node:
 ```
-sudo docker ps -a
-sudo docker logs -f containerID
+docker ps -a
+docker logs -f containerID
 ```
 
 ![6 dockerlogc](https://github.com/DinhCongTac221/Install-Union-node/assets/27664184/59b9544a-25d4-4b49-b790-7874ba36fdbd)
@@ -124,7 +124,7 @@ alias uniond='docker run -v ~/.unionvisor:/.unionvisor -v /tmp:/tmp --network ho
 ** 7.Create wallet: 
 **
 ```
-sudo uniond keys add nameofyourwallet
+uniond keys add nameofyourwallet
 ```
 typer password of your wallet
 ![8password](https://github.com/DinhCongTac221/Install-Union-node/assets/27664184/a9e1bd06-4d4a-4ba7-b802-31a66aae4043)
