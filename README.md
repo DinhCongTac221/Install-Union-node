@@ -99,7 +99,7 @@ sudo ufw status
 **
 
 ```
-sudo COMPOSE_FILE=/root/compose.yaml docker compose up -d
+COMPOSE_FILE=/root/compose.yaml docker compose up -d
 ```
 ![5run](https://github.com/DinhCongTac221/Install-Union-node/assets/27664184/1da0ba62-8581-45ab-a821-103b0482f54f)
 
@@ -119,7 +119,7 @@ Ctrl +C to exit running screen
 ** 6.Install Uniond
 **
 ```
-sudo alias uniond='docker run -v ~/.unionvisor:/.unionvisor -v /tmp:/tmp --network host -it ghcr.io/unionlabs/uniond-release:v0.19.0 --home /.unionvisor'
+alias uniond='docker run -v ~/.unionvisor:/.unionvisor -v /tmp:/tmp --network host -it ghcr.io/unionlabs/uniond-release:v0.19.0 --home /.unionvisor'
 ```
 ** 7.Create wallet: 
 **
