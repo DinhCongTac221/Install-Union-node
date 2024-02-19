@@ -9,7 +9,7 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
-apt-cache policy docker-ce
+sudo apt-cache policy docker-ce
 sudo apt install docker-ce
 sudo systemctl status docker
 ```
@@ -23,18 +23,18 @@ Ctrl+C to exit the screen
 sudo mkdir -p ~/.docker/cli-plugins/
 curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
 sudo chmod +x ~/.docker/cli-plugins/docker-compose
-docker compose version
+sudo docker compose version
 ```
 
 ** 3.Intall Unionvisor
 **
 ```
-docker pull ghcr.io/unionlabs/bundle-testnet-6:v0.19.0
+sudo docker pull ghcr.io/unionlabs/bundle-testnet-6:v0.19.0
 sudo mkdir ~/.unionvisor
 ```
 Change DinhCongtact221 to your node name
 ```
-docker run \
+sudo docker run \
   --volume ~/.unionvisor:/.unionvisor \
   --volume /tmp:/tmp \
   -it ghcr.io/unionlabs/bundle-testnet-6:v0.19.0 \
@@ -91,15 +91,15 @@ sudo ufw status
 **
 
 ```
-COMPOSE_FILE=/root/compose.yaml docker compose up -d
+sudo COMPOSE_FILE=/root/compose.yaml docker compose up -d
 ```
 ![5run](https://github.com/DinhCongTac221/Install-Union-node/assets/27664184/1da0ba62-8581-45ab-a821-103b0482f54f)
 
 
 To check logs of your node:
 ```
-docker ps -a
-docker logs -f containerID
+sudo docker ps -a
+sudo docker logs -f containerID
 ```
 
 ![6 dockerlogc](https://github.com/DinhCongTac221/Install-Union-node/assets/27664184/59b9544a-25d4-4b49-b790-7874ba36fdbd)
@@ -111,12 +111,12 @@ Ctrl +C to exit running screen
 ** 6.Install Uniond
 **
 ```
-alias uniond='docker run -v ~/.unionvisor:/.unionvisor -v /tmp:/tmp --network host -it ghcr.io/unionlabs/uniond-release:v0.19.0 --home /.unionvisor'
+sudo alias uniond='docker run -v ~/.unionvisor:/.unionvisor -v /tmp:/tmp --network host -it ghcr.io/unionlabs/uniond-release:v0.19.0 --home /.unionvisor'
 ```
 ** 7.Create wallet: 
 **
 ```
-uniond keys add nameofyourwallet
+sudo uniond keys add nameofyourwallet
 ```
 typer password of your wallet
 ![8password](https://github.com/DinhCongTac221/Install-Union-node/assets/27664184/a9e1bd06-4d4a-4ba7-b802-31a66aae4043)
