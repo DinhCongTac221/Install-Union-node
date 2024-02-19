@@ -116,7 +116,7 @@ alias uniond='docker run -v ~/.unionvisor:/.unionvisor -v /tmp:/tmp --network ho
 ** 7.Create wallet: 
 **
 ```
-union keys add nameofyourwallet
+uniond keys add nameofyourwallet
 ```
 typer password of your wallet
 ![8password](https://github.com/DinhCongTac221/Install-Union-node/assets/27664184/a9e1bd06-4d4a-4ba7-b802-31a66aae4043)
