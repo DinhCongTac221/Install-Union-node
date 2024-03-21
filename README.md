@@ -119,7 +119,7 @@ Ctrl +C to exit running screen
 ** 6.Install Uniond
 **
 ```
-alias uniond='docker run -v ~/.unionvisor:/.unionvisor -v /tmp:/tmp --network host -it ghcr.io/unionlabs/uniond-release:v0.19.0 --home /.unionvisor'
+alias uniond='docker run -v ~/.unionvisor:/.unionvisor -v /tmp:/tmp --network host -it ghcr.io/unionlabs/bundle-testnet-6:v0.19.0 --log-level off call --'
 ```
 ** 7.Create wallet: 
 **
